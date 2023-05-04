@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.FXMLDocumentController">
+   <children>
+      <VBox layoutX="32.0" layoutY="54.0" prefHeight="214.0" prefWidth="76.0" spacing="15.0">
+         <children>
+            <Label text="Bar Code">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Title">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Author">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Price">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="108.0" layoutY="54.0" prefHeight="214.0" prefWidth="192.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfBookBarCode" />
+            <TextField fx:id="tfBookTitle" />
+            <TextField fx:id="tfBookAuthor" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfBookPrice" layoutX="10.0" layoutY="35.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvBooks" layoutX="318.0" layoutY="40.0" prefHeight="319.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="colBookBarCode" prefWidth="73.0" text="Bar Code" />
+          <TableColumn fx:id="colBookTitle" prefWidth="167.0" text="Title" />
+            <TableColumn fx:id="colBookAuthor" prefWidth="157.0" text="Author" />
+            <TableColumn fx:id="colBookPrice" prefWidth="70.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBookInsert" layoutX="66.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleBookButtonAction" prefHeight="25.0" prefWidth="85.0" text="Insert">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btnBookUpdate" layoutX="66.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleBookButtonAction" prefHeight="25.0" prefWidth="85.0" text="Update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btnBookDelete" layoutX="166.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleBookButtonAction" prefHeight="25.0" prefWidth="76.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btnBookDisplay" layoutX="166.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleBookButtonAction" prefHeight="37.0" prefWidth="85.0" text="Display">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="710.0" layoutY="371.0" mnemonicParsing="false" onAction="#goBackToLibraryPage" prefHeight="25.0" prefWidth="76.0" text="Back">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
